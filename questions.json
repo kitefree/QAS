@@ -1,0 +1,24 @@
+
+[
+  {
+    "question": "_ViewImports.cshtml 的主要用途是什麼？",
+    "options": ["A. 設定視圖的預設版面", "B. 全域導入命名空間、指示和其他配置", "C. 指定視圖的預設模型類型", "D. 定義視圖檔案的預設腳本"],
+    "answer": "B. 全域導入命名空間、指示和其他配置",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "_ViewStart.cshtml 的作用是什麼？",
+    "options": ["A. 設定視圖的預設版面", "B. 定義視圖檔案的預設模型類型", "C. 在視圖中插入通用的 JavaScript 腳本", "D. 允許在整個應用程式中指定全域性的版面和頁面屬性"],
+    "answer": "D. 允許在整個應用程式中指定全域性的版面和頁面屬性",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "_Layout.cshtml 用於什麼？",
+    "options": ["A. 指定視圖檔案的預設版面", "B. 全域導入命名空間、指示和其他配置", "C. 定義視圖檔案的預設模型類型", "D. 定義應用程式中所有視圖的通用外觀和結構"],
+    "answer": "D. 定義應用程式中所有視圖的通用外觀和結構",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  }
+]
