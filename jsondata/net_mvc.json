@@ -1,5 +1,50 @@
-
 [
+  {
+    "question": "ViewData 的生命週期是什麼時候？",
+    "options": ["A. 整個應用程序生命週期", "B. 整個請求週期", "C. 整個會話週期"],
+    "answer": "B. 整個請求週期",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "ViewBag 是否需要顯式的類型轉換來訪問數據？",
+    "options": ["A. 是", "B. 否", "C. 取決於使用情況"],
+    "answer": "B. 否",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "使用 TempData 的典型場景是什麼？",
+    "options": ["A. 在視圖和控制器之間傳遞數據", "B. 存儲長期的數據", "C. 管理頁面狀態"],
+    "answer": "A. 在視圖和控制器之間傳遞數據",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ViewData 中存儲的數據如何在視圖中訪問？",
+    "options": ["A. 使用 Model 屬性", "B. 使用 @ViewData[\"KeyName\"]", "C. 使用 @ViewData.Model"],
+    "answer": "B. 使用 @ViewData[\"KeyName\"]",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "TempData 的主要用途是什麼？",
+    "options": ["A. 在不同請求之間傳遞數據", "B. 存儲全局配置信息", "C. 控制頁面的布局樣式"],
+    "answer": "A. 在不同請求之間傳遞數據",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "app.UseStaticFiles 的主要目的是什麼？",
+    "options": ["A. 處理動態內容的路由", "B. 提供靜態資源，如圖片、CSS和JavaScript", "C. 處理用戶身份驗證"],
+    "answer": "B. 提供靜態資源，如圖片、CSS和JavaScript",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  }
+,
+
+
+
   {
     "question": "_ViewImports.cshtml 的主要用途是什麼？",
     "options": ["A. 設定視圖的預設版面", "B. 全域導入命名空間、指示和其他配置", "C. 指定視圖的預設模型類型", "D. 定義視圖檔案的預設腳本"],
@@ -18,6 +63,402 @@
     "question": "_Layout.cshtml 用於什麼？",
     "options": ["A. 指定視圖檔案的預設版面", "B. 全域導入命名空間、指示和其他配置", "C. 定義視圖檔案的預設模型類型", "D. 定義應用程式中所有視圖的通用外觀和結構"],
     "answer": "D. 定義應用程式中所有視圖的通用外觀和結構",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "_ValidationScriptsPartial.cshtml 的作用是？",
+    "options": ["A. 定義視圖檔案的預設版面", "B. 提供用於客戶端驗證的腳本", "C. 設定視圖中的預設模型類型", "D. 定義應用程式中所有視圖的通用驗證邏輯"],
+    "answer": "B. 提供用於客戶端驗證的腳本",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET MVC 中，Data Annotation 是用於什麼目的？",
+    "options": ["a. 前端驗證", "b. 後端驗證", "c. 資料庫設計", "d. 以上皆是"],
+    "answer": "d. 以上皆是",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "下列哪個 Data Annotation 用於指定屬性的顯示名稱？",
+    "options": ["a. [Required]", "b. [DisplayName]", "c. [StringLength]", "d. [Range]"],
+    "answer": "b. [DisplayName]",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "哪個 Data Annotation 用於確保屬性值落在指定的範圍內？",
+    "options": ["a. [Required]", "b. [DisplayName]", "c. [StringLength]", "d. [Range]"],
+    "answer": "d. [Range]",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "下列哪個 Data Annotation 用於指定字串屬性的最大長度？",
+    "options": ["a. [Required]", "b. [DisplayName]", "c. [StringLength]", "d. [Range]"],
+    "answer": "c. [StringLength]",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "哪個 Data Annotation 用於確保屬性值不能為空？",
+    "options": ["a. [Required]", "b. [DisplayName]", "c. [StringLength]", "d. [Range]"],
+    "answer": "a. [Required]",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  }
+,
+
+
+
+  {
+    "question": "什麼是 `ModelState.AddModelError` 的作用？",
+    "options": ["A. 設定模型的屬性值", "B. 驗證用戶的身份", "C. 將錯誤信息添加到模型狀態", "D. 載入視圖的內容"],
+    "answer": "C. 將錯誤信息添加到模型狀態",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`ModelState.AddModelError` 的第一個參數是什麼？",
+    "options": ["A. 錯誤碼", "B. 欄位名稱", "C. 錯誤訊息", "D. 自訂鍵值"],
+    "answer": "B. 欄位名稱",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET MVC 或 ASP.NET Core 中，為什麼我們使用 `ModelState.AddModelError`？",
+    "options": ["A. 執行資料庫操作", "B. 驗證用戶的密碼", "C. 顯示錯誤訊息給用戶", "D. 加密敏感資料"],
+    "answer": "C. 顯示錯誤訊息給用戶",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`ValidationSummary` 用於顯示什麼？",
+    "options": ["A. 完整的模型狀態", "B. 特定屬性的錯誤訊息", "C. 資料庫的結果", "D. 用戶的設定"],
+    "answer": "A. 完整的模型狀態",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 Razor 視圖中，用於顯示特定屬性的錯誤信息的是什麼？",
+    "options": ["A. `ErrorMessage`", "B. `ValidationMessage`", "C. `ModelState.DisplayError`", "D. `Html.ValidationFor`"],
+    "answer": "B. `ValidationMessage`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`data-bs-theme=\"dark\"` 用於哪個前端框架的設定？",
+    "options": ["A. Angular", "B. React", "C. Vue.js", "D. Bootstrap"],
+    "answer": "D. Bootstrap",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`data-bs-theme=\"dark\"` 在 Bootstrap 中的作用是什麼？",
+    "options": ["A. 設定網頁的標題", "B. 切換到深色主題", "C. 設定動畫效果", "D. 隱藏元素"],
+    "answer": "B. 切換到深色主題",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在使用 `data-bs-theme=\"dark\"` 後，如何將整個網頁切換到深色主題？",
+    "options": ["A. 使用 JavaScript 切換主題", "B. 修改 CSS 樣式表", "C. 切換瀏覽器的主題", "D. 使用後端框架的主題設定"],
+    "answer": "A. 使用 JavaScript 切換主題",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`data-bs-theme=\"dark\"` 主要影響哪些 Bootstrap 元素？",
+    "options": ["A. 彈出視窗", "B. 表單元素", "C. 導覽列", "D. 所有上述"],
+    "answer": "D. 所有上述",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  }
+,
+  {
+    "question": "如何在 HTML 中應用 `data-bs-theme=\"dark\"`？",
+    "options": [
+      "A. `<body theme=\"dark\">`",
+      "B. `<div class=\"dark-theme\">`",
+      "C. `<html data-bs-theme=\"dark\">`",
+      "D. `<link href=\"dark-theme.css\" rel=\"stylesheet\">`"
+    ],
+    "answer": "C. `<html data-bs-theme=\"dark\">`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET Core 中，`TempData` 的主要作用是什麼？",
+    "options": [
+      "A. 暫存使用者的身份驗證信息",
+      "B. 儲存全域的應用程式設定",
+      "C. 用於在不同 HTTP 請求之間傳遞數據",
+      "D. 控制視圖的緩存策略"
+    ],
+    "answer": "C. 用於在不同 HTTP 請求之間傳遞數據",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`TempData` 的數據存儲在哪裡，並且在什麼時候被清除？",
+    "options": [
+      "A. 存儲在用戶端 cookie 中，並在瀏覽器關閉時清除",
+      "B. 存儲在伺服器的會話中，並在每個請求後清除",
+      "C. 存儲在用戶端 cookie 中，並在每個請求後清除",
+      "D. 存儲在伺服器的會話中，並在瀏覽器關閉時清除"
+    ],
+    "answer": "C. 存儲在用戶端 cookie 中，並在每個請求後清除",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "如何在 ASP.NET Core 控制器中設置 `TempData` 的值？",
+    "options": [
+      "A. `TempData.Set(\"key\", value)`",
+      "B. `TempData[\"key\"] = value`",
+      "C. `TempData.Add(\"key\", value)`",
+      "D. `TempData.SetValue(\"key\", value)`"
+    ],
+    "answer": "B. `TempData[\"key\"] = value`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "如何在 ASP.NET Core 視圖中讀取 `TempData` 的值？",
+    "options": [
+      "A. `var data = TempData.Get(\"key\")`",
+      "B. `var data = TempData.Value(\"key\")`",
+      "C. `var data = TempData[\"key\"]`",
+      "D. `var data = TempData.Read(\"key\")`"
+    ],
+    "answer": "C. `var data = TempData[\"key\"]`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`TempData` 和 `ViewData` 之間的主要區別是什麼？",
+    "options": [
+      "A. `TempData` 只能存儲一次性數據，而 `ViewData` 可以永久存儲",
+      "B. `TempData` 可以在重定向時傳遞數據，而 `ViewData` 不行",
+      "C. `TempData` 是用於控制器之間的數據傳遞，而 `ViewData` 是用於視圖和控制器之間的數據傳遞",
+      "D. `TempData` 存儲在用戶端 cookie 中，而 `ViewData` 存儲在伺服器端"
+    ],
+    "answer": "B. `TempData` 可以在重定向時傳"
+	},
+	
+	
+
+  {
+    "question": "在 ASP.NET Core 中，如果要在模型上定義一個屬性來處理檔案上傳，該屬性的型別應該是什麼？",
+    "options": ["A. `string`", "B. `int`", "C. `bool`", "D. `IFormFile`"],
+    "answer": "D. `IFormFile`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "為什麼在模型上使用 `IFormFile` 來處理檔案上傳？",
+    "options": [
+      "A. `IFormFile` 是.NET Core 中處理檔案上傳的唯一方式",
+      "B. `IFormFile` 包含了檔案的二進制數據和相關的元資料",
+      "C. 使用 `IFormFile` 可以方便地在控制器中處理檔案上傳",
+      "D. `IFormFile` 是.NET Core 中用於處理圖片上傳的專用型別"
+    ],
+    "answer": "B. `IFormFile`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET Core 控制器的動作方法中，如果要接受從表單上傳的檔案，該動作方法的參數應該是什麼型別？",
+    "options": ["A. `string`", "B. `int`", "C. `bool`", "D. `IFormFile`"],
+    "answer": "D. `IFormFile`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "如果要在模型中定義多個檔案上傳屬性，應該如何處理？",
+    "options": [
+      "A. 模型中只能有一個檔案上傳屬性",
+      "B. 使用 `List<IFormFile>` 來表示多個檔案上傳屬性",
+      "C. 為每個檔案上傳屬性分別定義一個模型",
+      "D. 在模型中使用 `string[]` 來表示多個檔案上傳屬性"
+    ],
+    "answer": "B. 使用 `List<IFormFile>`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET Core 中，`app.UseAuthentication()` 和 `app.UseAuthorization()` 的作用分別是什麼？",
+    "options": [
+      "A. `app.UseAuthentication()` 用於驗證用戶身份，`app.UseAuthorization()` 用於授予用戶權限",
+      "B. `app.UseAuthentication()` 用於授予用戶權限，`app.UseAuthorization()` 用於驗證用戶身份",
+      "C. 兩者的作用相同，可以互換使用",
+      "D. 兩者都不是 ASP.NET Core 中的有效中間件"
+    ],
+    "answer": "A. `app.UseAuthentication()` 用於驗證用戶身份，`app.UseAuthorization()` 用於授予用戶權限",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET Core 中，這兩個中間件的順序有重要性嗎？",
+    "options": [
+      "A. 沒有重要性，可以按照開發者的偏好設定順序",
+      "B. 有重要性，應該先調用 `app.UseAuthorization()`，然後是 `app.UseAuthentication()`",
+      "C. 有重要性，應該先調用 `app.UseAuthentication()`，然後是 `app.UseAuthorization()`",
+      "D. 順序沒有影響，因為這兩個中間件獨立作用"
+    ],
+    "answer": "C. 有重要性，應該先調用 `app.UseAuthentication()`，然後是 `app.UseAuthorization()`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`app.UseAuthentication()` 中的身份驗證過程包括什麼？",
+    "options": [
+      "A. 輸入密碼，檢查用戶名稱和密碼是否匹配",
+      "B. 發送驗證碼到用戶的電子郵件，用戶驗證後授予訪問權限",
+      "C. 檢查請求中的驗證令牌，確保用戶已經成功登入",
+      "D. 以上都是"
+    ],
+    "answer": "C. 檢查請求中的驗證令牌，確保用戶已經成功登入",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`app.UseAuthorization()` 中的權限授予過程包括什麼？",
+    "options": [
+      "A. 根據用戶的角色分配特定的權限",
+      "B. 檢查用戶的 IP 地址，根據不同的 IP 地址授予不同的權限",
+      "C. 根據用戶的行為模式授予特定的權限",
+      "D. 根據用戶的身份分配特定的權限"
+    ],
+    "answer": "A. 根據用戶的角色分配特定的權限",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 ASP.NET Core 中，如何配置應用程式的 cookie 屬性？",
+    "options": [
+      "A. 通過在 `Startup.cs` 文件的 `ConfigureServices` 方法中設定 `services.Configure<CookiePolicyOptions>()`",
+      "B. 通過在 `Startup.cs` 文件的 `Configure` 方法中設定 `app.ConfigureCookieOptions()`",
+      "C. 通過在 `Startup.cs` 文件的 `ConfigureServices` 方法中設定 `services.ConfigureApplicationCookie()`",
+      "D. 通過在 `Startup.cs` 文件的 `Configure` 方法中設定 `app.UseCookieOptions()`"
+    ],
+    "answer": "C. 通過在 `Startup.cs` 文件的 `ConfigureServices` 方法中設定 `services.ConfigureApplicationCookie()`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "在 `services.ConfigureApplicationCookie()` 中，可以設定哪些屬性？",
+    "options": [
+      "A. `Expiration`、`Cookie.Name`、`LoginPath` 等",
+      "B. `Password.RequireDigit`、`Password.RequireUppercase`、`Password.RequiredLength` 等",
+      "C. `Database.ConnectionString`、`Database.Provider`、`Database.MaxConnections` 等",
+      "D. `Session.Timeout`、`Session.CookieName`、`Session.IsEssential` 等"
+    ],
+    "answer": "A. `Expiration`、`Cookie.Name`、`LoginPath` 等",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`Cookie.Name` 的作用是什麼？",
+    "options": ["A. 設定 cookie 的名稱", "B. 設定 cookie 的有效期", "C. 設定 cookie 的域名", "D. 設定 cookie 的安全屬性"],
+    "answer": "A. 設定 cookie 的名稱",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`LoginPath` 的作用是什麼？",
+    "options": ["A. 設定登入頁面的路徑", "B. 設定註冊頁面的路徑", "C. 設定忘記密碼頁面的路徑", "D. 設定登出頁面的路徑"],
+    "answer": "A. 設定登入頁面的路徑",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "如何在 `services.ConfigureApplicationCookie()` 中設定 cookie 的有效期？",
+    "options": [
+      "A. 使用 `services.ConfigureApplicationCookie(options => options.ExpireTimeSpan = TimeSpan.FromDays(1))`",
+      "B. 使用 `services.ConfigureApplicationCookie(options => options.Cookie.Expiration = TimeSpan.FromDays(1))`",
+      "C. 使用 `services.ConfigureApplicationCookie(options => options.Cookie.Expires = DateTime.Now.AddDays(1))`",
+      "D. 使用 `services.ConfigureApplicationCookie(options => options.Cookie.Lifetime = TimeSpan.FromDays(1))`"
+    ],
+    "answer": "B. 使用 `services.ConfigureApplicationCookie(options => options.Cookie.Expiration = TimeSpan.FromDays(1))`",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  }
+,	
+
+
+
+
+  {
+    "question": "在 Razor 視圖中，`asp-append-version` 的作用是什麼？",
+    "options": [
+      "A. 自動將版本號附加到 CSS 和 JavaScript 文件的 URL 中",
+      "B. 控制是否要附加文件版本號到 HTML 文件中",
+      "C. 設定 Razor 視圖的版本號",
+      "D. 確保所有的 Razor 元素都有版本號"
+    ],
+    "answer": "A. 自動將版本號附加到 CSS 和 JavaScript 文件的 URL 中",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "`asp-append-version` 的主要用途是什麼？",
+    "options": [
+      "A. 提高 Razor 視圖的性能",
+      "B. 避免瀏覽器快取問題，確保用戶總是獲取最新的文件版本",
+      "C. 控制 Razor 元素的顯示與隱藏",
+      "D. 確保 Razor 視圖的內容是最新的"
+    ],
+    "answer": "B. 避免瀏覽器快取問題，確保用戶總是獲取最新的文件版本",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "如何在 Razor 視圖中使用 `asp-append-version`？",
+    "options": [
+      "<link rel=\"stylesheet\" href=\"site.css\" asp-append-version=\"true\" />",
+      "<script src=\"script.js\" asp-append-version=\"true\"></script>",
+      "以上都對",
+      "以上都不對"
+    ],
+    "answer": "以上都對",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "DTO（Data Transfer Object）和 ViewModel 的主要區別是什麼？",
+    "options": [
+      "A. DTO 用於將數據從數據庫傳輸到業務邏輯，ViewModel 用於將數據傳遞到視圖",
+      "B. DTO 是用於表現數據庫模型的純數據類，而 ViewModel 包含了用於呈現的額外邏輯和數據",
+      "C. 兩者沒有實際區別，只是用不同的名稱描述同一概念",
+      "D. DTO 和 ViewModel 是相同的概念，可以互換使用"
+    ],
+    "answer": "B. DTO 是用於表現數據庫模型的純數據類，而 ViewModel 包含了用於呈現的額外邏輯和數據",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "什麼是 DTO 的主要目的？",
+    "options": [
+      "A. 用於呈現數據到前端視圖",
+      "B. 在不同層級的應用程序中傳遞數據",
+      "C. 包含用於視圖呈現的額外邏輯",
+      "D. 將數據從一個數據庫傳輸到另一個數據庫"
+    ],
+    "answer": "B. 在不同層級的應用程序中傳遞數據",
+    "answerExplain": "",
+    "studentChoicesAnswer": ""
+  },
+  {
+    "question": "ViewModel 可以包含哪些額外的邏輯？",
+    "options": [
+      "A. 數據格式轉換、驗證邏輯、視圖顯示控制邏輯等",
+      "B. 數據庫查詢邏輯、事務控制邏輯、業務邏輯等",
+      "C. 只能包含基本的數據結構，不能包含任何額外的邏輯",
+      "D. 只能包含與數據庫模型相關的邏輯"
+    ],
+    "answer": "A. 數據格式轉換、驗證邏輯、視圖顯示控制邏輯等",
     "answerExplain": "",
     "studentChoicesAnswer": ""
   }
