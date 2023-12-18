@@ -3,229 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作答系統</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .question-container {
-            margin-bottom: 20px;
-        }
-        .incorrect-answer {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+    <title>Responsive Buttons</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-5">
-        <p id="question-number">第幾題</p>
-        <div id="question-container" class="question-container">
-            <!-- Question content will be dynamically inserted here -->
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Large buttons for desktop -->
+        <div class="col-lg-4 mb-3">
+            <a href="net_mvc.html" class="btn btn-primary btn-lg btn-block">NET MVC</a>
         </div>
-        <div class="mt-3">            
-            <button id="prev-btn" class="btn btn-primary" disabled>上一題</button>
-            <button id="next-btn" class="btn btn-primary">下一題</button>
-            <button id="finish-btn" class="btn btn-success" style="display:none">結束</button>
-            <button id="restart-btn" class="btn btn-primary" style="display: none">重新測驗</button>
+        <div class="col-lg-4 mb-3">
+            <a href="page2.html" class="btn btn-success btn-lg btn-block">Button 2</a>
         </div>
-        <div id="result-container" class="mt-5" style="display: none;">
-            <!-- Result table will be dynamically inserted here -->
+        <div class="col-lg-4 mb-3">
+            <a href="page3.html" class="btn btn-danger btn-lg btn-block">Button 3</a>
+        </div>
+        
+        <!-- Small buttons for mobile -->
+        <div class="col-12 mb-3 d-lg-none">
+            <a href="page1.html" class="btn btn-primary btn-lg btn-block">Button 1</a>
+        </div>
+        <div class="col-12 mb-3 d-lg-none">
+            <a href="page2.html" class="btn btn-success btn-lg btn-block">Button 2</a>
+        </div>
+        <div class="col-12 mb-3 d-lg-none">
+            <a href="page3.html" class="btn btn-danger btn-lg btn-block">Button 3</a>
         </div>
     </div>
+</div>
 
-    <script>
-        var questions = 
-[
-  {
-    "question": "_ViewImports.cshtml 的主要用途是什麼？",
-    "options": ["A. 設定視圖的預設版面", "B. 全域導入命名空間、指示和其他配置", "C. 指定視圖的預設模型類型", "D. 定義視圖檔案的預設腳本"],
-    "answer": "B. 全域導入命名空間、指示和其他配置",
-    "answerExplain": "",
-    "studentChoicesAnswer": ""
-  },
-  {
-    "question": "_ViewStart.cshtml 的作用是什麼？",
-    "options": ["A. 設定視圖的預設版面", "B. 定義視圖檔案的預設模型類型", "C. 在視圖中插入通用的 JavaScript 腳本", "D. 允許在整個應用程式中指定全域性的版面和頁面屬性"],
-    "answer": "D. 允許在整個應用程式中指定全域性的版面和頁面屬性",
-    "answerExplain": "",
-    "studentChoicesAnswer": ""
-  },
-  {
-    "question": "_Layout.cshtml 用於什麼？",
-    "options": ["A. 指定視圖檔案的預設版面", "B. 全域導入命名空間、指示和其他配置", "C. 定義視圖檔案的預設模型類型", "D. 定義應用程式中所有視圖的通用外觀和結構"],
-    "answer": "D. 定義應用程式中所有視圖的通用外觀和結構",
-    "answerExplain": "",
-    "studentChoicesAnswer": ""
-  }
-];
-
-
-        var currentQuestionIndex = 0;
-        var userAnswers = [];
-        var shuffledQuestionIndices = shuffle([...Array(questions.length).keys()]);
-
-        function shuffle(array) {
-            var currentIndex = array.length, randomIndex;
-
-            while (currentIndex !== 0) {
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex--;
-
-                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-            }
-
-            return array;
-        }
-
-        function renderQuestion() {
-            var currentQuestion = questions[shuffledQuestionIndices[currentQuestionIndex]];
-            var questionContainer = document.getElementById("question-container");
-            var questionNumber = document.getElementById("question-number");
-            
-            questionNumber.innerHTML = `<h2>第${currentQuestionIndex + 1}題</h2>`;
-            questionContainer.innerHTML = `
-                <h3>${currentQuestion.question}</h3>
-                <form id="options-form">
-                    ${currentQuestion.options.map(option => `
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="answer" value="${option}" ${currentQuestion.studentChoicesAnswer === option ? 'checked' : ''}>
-                            <label class="form-check-label">${option}</label>
-                        </div>
-                    `).join('')}
-                </form>
-            `;
-        }
-
-        function renderResult() {
-            var resultContainer = document.getElementById("result-container");
-            resultContainer.innerHTML = `
-                <h3>測驗結果</h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>問題</th>
-                            <th>考生答案</th>
-                            <th>正確答案</th>
-                            <th>正確答案解釋</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${questions.map((question, index) => `
-                            <tr>
-                                <td>${question.question}</td>
-                                <td ${question.studentChoicesAnswer !== question.answer ? 'class="incorrect-answer"' : ''}>${question.studentChoicesAnswer}</td>
-                                <td>${question.answer}</td>
-                                <td>${question.answerExplain}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-                <p>總題目數: ${questions.length}</p>
-                <p>答對題數: ${userAnswers.filter((answer, index) => answer === questions[shuffledQuestionIndices[index]].answer).length}</p>
-                <p>答錯題數: ${userAnswers.filter((answer, index) => answer !== questions[shuffledQuestionIndices[index]].answer).length}</p>
-            `;
-        }
-
-        function showQuestion() {
-            document.getElementById("result-container").style.display = "none";
-            document.getElementById("question-container").style.display = "block";
-        }
-
-        function showResult() {
-            document.getElementById("question-container").style.display = "none";
-            document.getElementById("result-container").style.display = "block";
-        }
-
-        function saveUserAnswer() {
-            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
-            if (selectedAnswer) {
-                var currentQuestion = questions[shuffledQuestionIndices[currentQuestionIndex]];
-                currentQuestion.studentChoicesAnswer = selectedAnswer.value;
-                userAnswers[shuffledQuestionIndices[currentQuestionIndex]] = selectedAnswer.value;
-                localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-            }
-        }
-
-        function loadUserAnswers() {
-            var storedAnswers = localStorage.getItem("userAnswers");
-            if (storedAnswers) {
-                userAnswers = JSON.parse(storedAnswers);
-            }
-        }
-
-        document.getElementById("prev-btn").addEventListener("click", function()
-
- {
-            saveUserAnswer();
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                renderQuestion();
-                showQuestion();
-            }
-            toggleButtons();
-        });
-
-        document.getElementById("next-btn").addEventListener("click", function() {
-            saveUserAnswer();
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                renderQuestion();
-                showQuestion();
-            }
-            toggleButtons();
-        });
-
-        document.getElementById("finish-btn").addEventListener("click", function() {
-            saveUserAnswer();
-            loadUserAnswers();
-            renderResult();
-            showResult();
-
-            // Compare answers
-            var correctCount = userAnswers.filter((answer, index) => answer === questions[shuffledQuestionIndices[index]].answer).length;
-            var incorrectCount = userAnswers.length - correctCount;
-
-            document.getElementById("prev-btn").style.display = "none";
-            document.getElementById("next-btn").style.display = "none";
-            document.getElementById("finish-btn").style.display = "none";
-            document.getElementById("restart-btn").style.display = "";
-
-            //alert(`總題目數: ${questions.length}\n答對題數: ${correctCount}\n答錯題數: ${incorrectCount}`);
-        });
-
-        document.getElementById("restart-btn").addEventListener("click", function() {
-            location.href=".";
-            // currentQuestionIndex = 0;
-            // userAnswers = [];
-            // shuffledQuestionIndices = shuffle([...Array(questions.length).keys()]);
-            // renderQuestion();
-            // showQuestion();
-            // toggleButtons();
-
-            // document.getElementById("prev-btn").style.display = "";
-            // document.getElementById("next-btn").style.display = "";
-            // document.getElementById("finish-btn").style.display = "";
-            // document.getElementById("restart-btn").style.display = "none";
-        });
-
-        function toggleButtons() {
-            document.getElementById("prev-btn").disabled = currentQuestionIndex === 0;
-            document.getElementById("next-btn").disabled = currentQuestionIndex === questions.length - 1;
-
-            if (currentQuestionIndex == questions.length-1) {
-                document.getElementById("next-btn").style.display = 'none';
-                document.getElementById("finish-btn").style.display = '';                
-            }
-            else{
-                document.getElementById("next-btn").style.display = '';
-                document.getElementById("finish-btn").style.display = 'none';                
-            }
-            
-        }
-
-        // Initial rendering
-        renderQuestion();
-        showQuestion();
-        toggleButtons();
-    </script>
+<!-- Bootstrap JS (optional, for some features like dropdowns) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
