@@ -417,8 +417,8 @@
   {
     "question": "如何在 Razor 視圖中使用 `asp-append-version`？",
     "options": [
-      "<link rel=\"stylesheet\" href=\"site.css\" asp-append-version=\"true\" />",
-      "<script src=\"script.js\" asp-append-version=\"true\"></script>",
+      "<code><link rel=\"stylesheet\" href=\"site.css\" asp-append-version=\"true\" /></code>",
+      "<code><script src=\"script.js\" asp-append-version=\"true\"></script></code>",
       "以上都對",
       "以上都不對"
     ],
