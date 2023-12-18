@@ -179,12 +179,12 @@
   {
     "question": "如何在 HTML 中應用 `data-bs-theme=\"dark\"`？",
     "options": [
-      "A. `<body theme=\"dark\">`",
-      "B. `<div class=\"dark-theme\">`",
-      "C. `<html data-bs-theme=\"dark\">`",
-      "D. `<link href=\"dark-theme.css\" rel=\"stylesheet\">`"
+      "A. <code><body theme=\"dark\"></code>",
+      "B. <code><div class=\"dark-theme\"></code>",
+      "C. <code><html data-bs-theme=\"dark\"></code>",
+      "D. <code><link href=\"dark-theme.css\" rel=\"stylesheet\"></code>"
     ],
-    "answer": "C. `<html data-bs-theme=\"dark\">`",
+    "answer": "C. <html data-bs-theme=\"dark\">",
     "answerExplain": "",
     "studentChoicesAnswer": ""
   },
